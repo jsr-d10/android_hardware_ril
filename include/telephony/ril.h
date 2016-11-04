@@ -60,13 +60,18 @@ extern "C" {
 #define CDMA_ALPHA_INFO_BUFFER_LENGTH 64
 #define CDMA_NUMBER_INFO_BUFFER_LENGTH 81
 
+#define RIL_HARDWARE_CONFIG_UUID_LENGTH 64
+
 #define MAX_RILDS 3
 #define MAX_SOCKET_NAME_LENGTH 6
 #define MAX_CLIENT_ID_LENGTH 2
 #define MAX_DEBUG_SOCKET_NAME_LENGTH 12
 #define MAX_QEMU_PIPE_NAME_LENGTH  11
-#define MAX_UUID_LENGTH 64
+#define MAX_UUID_LENGTH RIL_HARDWARE_CONFIG_UUID_LENGTH
 
+#if (RIL_VERSION == 11)
+#define FEATURE_MTU_CAF 1
+#endif
 
 typedef void * RIL_Token;
 
@@ -426,6 +431,7 @@ typedef struct {
                                    Value <= 0 means network has either not sent a value or
                                    sent an invalid value */
 } RIL_Data_Call_Response_v11;
+#define RIL_Data_Call_Response_v9_CAF RIL_Data_Call_Response_v11
 #endif
 
 typedef enum {
