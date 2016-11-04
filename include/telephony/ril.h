@@ -113,22 +113,21 @@ typedef enum {
     RIL_E_FDN_CHECK_FAILURE = 14,               /* command failed because recipient is not on FDN list */
     RIL_E_ILLEGAL_SIM_OR_ME = 15,               /* network selection failed due to
                                                    illegal SIM or ME */
-    RIL_E_MISSING_RESOURCE = 16,                /* no logical channel available */
-    RIL_E_NO_SUCH_ELEMENT = 17,                  /* application not found on SIM */
-    RIL_E_DIAL_MODIFIED_TO_USSD = 18,           /* DIAL request modified to USSD */
-    RIL_E_DIAL_MODIFIED_TO_SS = 19,             /* DIAL request modified to SS */
-    RIL_E_DIAL_MODIFIED_TO_DIAL = 20,           /* DIAL request modified to DIAL with different
+    RIL_E_UNUSED = 16,
+    RIL_E_DIAL_MODIFIED_TO_USSD = 17,           /* DIAL request modified to USSD */
+    RIL_E_DIAL_MODIFIED_TO_SS = 18,             /* DIAL request modified to SS */
+    RIL_E_DIAL_MODIFIED_TO_DIAL = 19,           /* DIAL request modified to DIAL with different
                                                    data */
-    RIL_E_USSD_MODIFIED_TO_DIAL = 21,           /* USSD request modified to DIAL */
-    RIL_E_USSD_MODIFIED_TO_SS = 22,             /* USSD request modified to SS */
-    RIL_E_USSD_MODIFIED_TO_USSD = 23,           /* USSD request modified to different USSD
+    RIL_E_USSD_MODIFIED_TO_DIAL = 20,           /* USSD request modified to DIAL */
+    RIL_E_USSD_MODIFIED_TO_SS = 21,             /* USSD request modified to SS */
+    RIL_E_USSD_MODIFIED_TO_USSD = 22,           /* USSD request modified to different USSD
                                                    request */
-    RIL_E_SS_MODIFIED_TO_DIAL = 24,             /* SS request modified to DIAL */
-    RIL_E_SS_MODIFIED_TO_USSD = 25,             /* SS request modified to USSD */
+    RIL_E_SS_MODIFIED_TO_DIAL = 23,             /* SS request modified to DIAL */
+    RIL_E_SS_MODIFIED_TO_USSD = 24,             /* SS request modified to USSD */
+    RIL_E_SS_MODIFIED_TO_SS = 25,               /* SS request modified to different SS request */
     RIL_E_SUBSCRIPTION_NOT_SUPPORTED = 26,      /* Subscription not supported by RIL */
-    RIL_E_SS_MODIFIED_TO_SS = 27                /* SS request modified to different SS request */
-
-
+    RIL_E_MISSING_RESOURCE = 27,                /* no logical channel available */
+    RIL_E_NO_SUCH_ELEMENT = 28                  /* application not found on SIM */
 } RIL_Errno;
 
 typedef enum {
